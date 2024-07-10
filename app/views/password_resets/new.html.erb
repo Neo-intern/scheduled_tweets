@@ -1,0 +1,10 @@
+<h1>Reset Your Password</h1>
+<%= form_with model: @user, url: password_reset_path(token: params[:token]) do |form| %>
+    <div class="mb-3">
+        <%= form.label :email %>
+        <%= form.email_field :email, class: "form-control", placeholder: "neo@bitcube.com" %>
+    </div>
+    <div class="mb-3">
+        <%= form.submit "Reset Password", class: "btn btn-primary" %>
+    </div>
+    <% end %>
