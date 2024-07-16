@@ -5,7 +5,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def create
-    if (user = User.find_by(email: params[:email]))
+    if (@user = User.find_by(email: params[:email]))
         PasswordMailer.with(
           user: user,
           token: user.generate_token_for(:password_reset)

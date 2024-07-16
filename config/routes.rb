@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resource :session
   resource :password_reset
   resource :password
-  # resources :twitter_accounts
+
+  resources :twitter_accounts
+  resources :tweets
+
   root "main#index"
 end

@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   end
   helper_method :user_signed_in?
   def require_user_logged_in!
-    redirect_to new_session_path, alert: "You must be signed in to do that." if Current.user.nil?
+    redirect_to new_session_path, alert: "You must be signed in to do that." if current_user.nil?
   end
 
 
