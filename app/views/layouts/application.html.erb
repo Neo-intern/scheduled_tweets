@@ -23,14 +23,6 @@
   <%= render partial: "shared/navbar" %>
   <div class="container">
     <%= render partial: "shared/flash" %>
-    <% if user_signed_in? %>
-      <%= link_to "Edit Password", edit_password_path, class: "btn btn-secondary" %>
-      <%= button_to "Log out", session_path, method: :delete, class: "btn btn-danger" %>
-    <% else %>
-        <%= link_to "Sign Up", new_registration_path, class: "btn btn-primary" %>
-        <%= link_to "Log in", new_session_path, class: "btn btn-success" %>
-    <% end %>
-    
     <%= yield %>
   </div>
   </body>
