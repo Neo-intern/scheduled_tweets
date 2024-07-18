@@ -22,6 +22,7 @@ class OmniauthCallbacksController < ApplicationController
     end
     end
 end
+
   def auth
     request.env["omniauth.auth"]
   end
